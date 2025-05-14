@@ -29,7 +29,11 @@ proporcionalNovo = diariaNovo * diasPlanoNovo
 
 valorTotal = proporcionalAntigo + proporcionalNovo
 
-print('Proporcional do plano antigo',proporcionalAntigo)
-print('Proporcional do plano novo',proporcionalNovo)
-print('Valor total do proporcional',valorTotal)
+
+print('_____________________________________________________')
+print('Proporcional do plano antigo R$',proporcionalAntigo)
+print('Proporcional do plano novo R$',proporcionalNovo)
+print('Valor total do proporcional R$',valorTotal)
+print('_____________________________________________________')
+
 
