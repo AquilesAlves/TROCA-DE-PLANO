@@ -12,7 +12,6 @@
 # valor_total = proporcional + valor_plano
 # print(valor_total)
 
-
 valorAntigo = float(input('Digite o valor do plano antigo: '))
 valorNovo = float(input('Digite o valor do plano novo: '))
 vencimento = int(input('Digite a data do vencimento: '))
@@ -21,14 +20,21 @@ dataTroca = int(input('Digite a data da troca: '))
 diariaAntigo = valorAntigo / 30
 diariaNovo = valorNovo / 30
 
-diasPlanoAntigo = dataTroca - vencimento 
-diasPlanoNovo = vencimento - dataTroca + 30
+if(dataTroca > vencimento):
+    diasPlanoAntigo = dataTroca - vencimento 
+    diasPlanoNovo = vencimento - dataTroca + 30
+    
+    proporcionalAntigo = diariaAntigo * diasPlanoAntigo
+    proporcionalNovo = diariaNovo * diasPlanoNovo
 
-proporcionalAntigo = diariaAntigo * diasPlanoAntigo
-proporcionalNovo = diariaNovo * diasPlanoNovo
+else:
+    diasPlanoAntigo = dataTroca - vencimento + 30
+    diasPlanoNovo = vencimento - dataTroca 
+
+    proporcionalAntigo = diariaAntigo * diasPlanoAntigo
+    proporcionalNovo = diariaNovo * diasPlanoNovo
 
 valorTotal = proporcionalAntigo + proporcionalNovo
-
 
 print('_____________________________________________________')
 print('Proporcional do plano antigo R$',proporcionalAntigo)
